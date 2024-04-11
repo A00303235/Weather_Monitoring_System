@@ -1,20 +1,38 @@
-Console.WriteLine("Weather Forecast:");
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-            // Implement logic to generate and display weather forecast based on current weather data
-            // Example forecast logic based on temperature
-            if (weatherData.Temperature < 0)
+namespace Weather_monitoring_system
+{
+    public class forecastDisplay : IDisplay
+    {
+        private weatherData WeatherData;
+
+        public forecastDisplay(weatherData WeatherData)
+        {
+            this.WeatherData = WeatherData;
+            // Subscribe to events of Weatherdata 
+        }
+              public void Display()
+        {
+            Console.WriteLine("Weather Forecast:- ");
+
+            // Logic for generating and displaying weather forecast based on current weather 
+            if (WeatherData.Temperature < 0)
             {
-                Console.WriteLine("Freezing with a chance of snow or icy conditions");
+                Console.WriteLine("Freezing with a possible snowfall or ice weather");
             }
-            else if (weatherData.Temperature < 10)
+            else if (WeatherData.Temperature < 10)
             {
-                Console.WriteLine("Cold with a chance of rain or snow showers");
+                Console.WriteLine("Chilly with a potential for snow showers or rain");
             }
-            else if (weatherData.Temperature < 20)
+            else if (WeatherData.Temperature < 20)
             {
-                Console.WriteLine("Cool with a chance of light rain showers");
+                Console.WriteLine("Cool with a possiblity of light rain showers");
             }
-            else if (weatherData.Temperature < 30)
+            else if (WeatherData.Temperature < 30)
             {
                 Console.WriteLine("Warm with a chance of sun");
             }
@@ -24,3 +42,7 @@ Console.WriteLine("Weather Forecast:");
             }
 
             Console.WriteLine();
+        }
+    }
+}
+            

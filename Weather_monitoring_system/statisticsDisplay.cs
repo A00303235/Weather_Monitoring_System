@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Weather_montitoring_system
+namespace Weather_monitoring_system
 {
     public class statisticsDisplay : IDisplay
     {
@@ -13,7 +13,7 @@ namespace Weather_montitoring_system
         public statisticsDisplay(weatherData weatherData)
         {
             this.weatherData = weatherData;
-            // Subscribe to weatherData's events
+            // Subscribe to events of Weatherdata 
         }
 
         public void Display()
@@ -22,7 +22,7 @@ namespace Weather_montitoring_system
 
             if (temperatures.Length == 0)
             {
-                Console.WriteLine("No weather data available for statistics.");
+                Console.WriteLine("No data of weather  available for statistics");
                 return;
             }
 

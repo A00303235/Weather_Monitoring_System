@@ -11,15 +11,15 @@ namespace Weather_monitoring_system.App
         {
             weatherStation Weather_Station = new weatherStation();
 
-            // Create display objects
-            IDisplay currentConditionsDisplay = weatherStation.CreateDisplay("CurrentConditions");
-            IDisplay statisticsDisplay = weatherStation.CreateDisplay("Statistics");
-            IDisplay forecastDisplay = weatherStation.CreateDisplay("Forecast");
+            // Creating display objects
+            IDisplay currentConditionsDisplay = Weather_Station.CreateDisplay("CurrentConditions");
+            IDisplay statisticsDisplay = Weather_Station.CreateDisplay("Statistics");
+            IDisplay forecastDisplay = Weather_Station.CreateDisplay("Forecast");
 
-            // Update weather data
-            Weather_Data.Instance.UpdateWeatherData();
+            // Updating weather data
+            weatherData.Instance.UpdateWeatherData();
 
-            // Display weather data
+            // Displaying weather data
             currentConditionsDisplay.Display();
             statisticsDisplay.Display();
             forecastDisplay.Display();

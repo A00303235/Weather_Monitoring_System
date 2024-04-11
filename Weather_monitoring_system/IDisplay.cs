@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 
 
-namespace Weather_montitoring_system
+namespace Weather_monitoring_system
 {
     public interface IDisplay
     {
-        void Display();
+        // Method for displaying weather information
+        public void Display();
     }
 }

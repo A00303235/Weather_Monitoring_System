@@ -8,3 +8,7 @@ added a cs proj file
 Made the structure by creating class files
 Made 3 class files and solved errors
 Made the reaming classes but got errors
+tried to solve errors and solved most of them
+solved errors and modified the logic for weather forcast
+finally run the code got the desired output
+Made the code clean

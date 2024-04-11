@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-
-
-namespace Weather_montitoring_system
+namespace Weather_monitoring_system
 {
+    // Representing a singleton class for management of weather data .
     public class weatherData
     {
         private static weatherData? instance;
@@ -21,6 +19,7 @@ namespace Weather_montitoring_system
             tempHistory = new List<int>();
         }
 
+        // Geting the singleton instance for Weatherdata class
         public static weatherData Instance
         {
             get
@@ -31,7 +30,7 @@ namespace Weather_montitoring_system
             }
         }
 
-        // Variables to hold the data of weather (temperature, humidity, wind speed,)
+        // Variables to store the data of weather (temperature, humidity, wind speed,)
         public int Temperature { get; private set; }
         public int Humidity { get; private set; }
         public int WindSpeed { get; private set; }
@@ -57,7 +56,7 @@ namespace Weather_montitoring_system
             return tempHistory.ToArray();
         }
 
-        // Method to notify observers
+        // Method for notifing observers
         private void NotifyObservers()
         {
             // Implementation to notify observers
@@ -65,5 +64,3 @@ namespace Weather_montitoring_system
 
     }
 }
-
-

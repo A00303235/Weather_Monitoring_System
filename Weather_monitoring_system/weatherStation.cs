@@ -6,16 +6,16 @@ namespace Weather_monitoring_system
     {
         public IDisplay CreateDisplay(string displayType)
         {
-            Weather_Data weatherData = Weather_Data.Instance;
+            weatherData WeatherData = weatherData.Instance;
 
             switch (displayType)
             {
                 case "CurrentConditions":
-                    return new CurrentConditions_Display(weatherData);
+                    return new currentConditionsDisplay(WeatherData);
                 case "Statistics":
-                    return new Statistics_Display(weatherData);
+                    return new statisticsDisplay(WeatherData);
                 case "Forecast":
-                    return new Forecast_Display(weatherData);
+                    return new forecastDisplay(WeatherData);
                 default:
                     throw new ArgumentException("Invalid display type");
             }
