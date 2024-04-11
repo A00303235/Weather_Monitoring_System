@@ -7,3 +7,4 @@ Created a console application named: Weather_monitoring_system
 added a cs proj file  
 Made the structure by creating class files
 Made 3 class files and solved errors
+Made the reaming classes but got errors
