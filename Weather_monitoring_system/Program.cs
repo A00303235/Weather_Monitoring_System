@@ -16,8 +16,11 @@ namespace Weather_monitoring_system.App
             IDisplay statisticsDisplay = Weather_Station.CreateDisplay("Statistics");
             IDisplay forecastDisplay = Weather_Station.CreateDisplay("Forecast");
 
-            // Updating weather data
-            weatherData.Instance.UpdateWeatherData();
+            // Updating the data of weather multiple times for generating temperature history
+            for (int i = 0; i < 10; i++)
+            {
+                weatherData.Instance.UpdateWeatherData();
+            }
 
             // Displaying weather data
             currentConditionsDisplay.Display();

@@ -12,3 +12,5 @@ tried to solve errors and solved most of them
 solved errors and modified the logic for weather forcast
 finally run the code got the desired output
 Made the code clean
+Forgot a line of code so 
+Added for loop in program.cs to keep weather updated
